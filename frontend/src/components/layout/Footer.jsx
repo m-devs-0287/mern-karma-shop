@@ -1,5 +1,6 @@
 import React from "react";
 import { FaLongArrowAltRight } from "react-icons/fa";
+import {AiOutlineHeart} from 'react-icons/ai'
 
 const Footer = () => {
   return (
@@ -88,10 +89,13 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <p className="pt-14 text-gray-500">
+      <p className="pt-14 text-gray-500 text-center">
         Copyright ©2023 All rights reserved | This template is made with
-        <i className="fa-regular fa-heart text-orange-300 pl-1"></i> by
+        <AiOutlineHeart className="inline h-10 mx-1 text-orange-300"/>
+         by
         <span className="text-orange-300"> Colorlib</span>
+
+
       </p>
     </footer>
   );

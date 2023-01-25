@@ -3,8 +3,8 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#222222]">
-      <div className="w-[1200px] m-auto grid grid-cols-4 text-gray-500 py-5 text-left gap-10">
+    <footer className="bg-[#222222] py-20">
+      <div className="w-[1200px] m-auto grid grid-cols-4 text-gray-500 text-left gap-10">
         <div className="flex flex-col gap-5">
           <h3 className="text-xl text-white capitalize font-bold">about us</h3>
           <p>
@@ -66,29 +66,29 @@ const Footer = () => {
           <p>let's be social</p>
           <ul className="flex gap-5">
             <li>
-              <a href="">
+              <a href="/">
                 <i className="fa-brands fa-facebook-f"></i>
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="/">
                 <i className="fa-brands fa-twitter"></i>
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="/">
                 <i className="fa-brands fa-dribbble"></i>
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="/">
                 <i className="fa-brands fa-behance"></i>
               </a>
             </li>
           </ul>
         </div>
       </div>
-      <p className="py-14 text-gray-500">
+      <p className="pt-14 text-gray-500">
         Copyright ©2023 All rights reserved | This template is made with
         <i className="fa-regular fa-heart text-orange-300 pl-1"></i> by
         <span className="text-orange-300"> Colorlib</span>

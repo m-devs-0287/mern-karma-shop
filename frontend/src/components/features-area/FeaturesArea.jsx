@@ -29,7 +29,7 @@ const featuresItems = [
 
 const FeaturesArea = () => {
   return (
-    <div className="w-full border py-24">
+    <div className="w-full py-24">
       <div
         className="grid grid-cols-4 max-w-[1200px] m-auto bg-white drop-shadow-lg py-12"
       >

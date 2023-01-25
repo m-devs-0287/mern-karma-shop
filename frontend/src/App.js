@@ -5,7 +5,7 @@ import "./styles/App.css";
 
 function App() {
   return (
-    <div className="App">
+    <div className="text-gray-500">
       <Header />
       <main>
         <Home />

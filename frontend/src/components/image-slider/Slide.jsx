@@ -8,7 +8,7 @@ const Slide = ({heading, context}) => {
       <div className=" h-full min-w-full">
         <div className="text-left flex h-full w-[1000px] m-auto">
           <div className="w-[40%] h-full  flex flex-col justify-center gap-10">
-            <h1 className="text-7xl font-bold">
+            <h1 className="text-7xl font-bold text-black">
               {heading} <br /> Collection!
             </h1>
             <p>{context}</p>

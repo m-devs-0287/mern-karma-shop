@@ -29,16 +29,16 @@ const featuresItems = [
 
 const FeaturesArea = () => {
   return (
-    <div className="w-full py-24">
+    <div className="py-24">
       <div
         className="grid grid-cols-4 max-w-[1200px] m-auto bg-white drop-shadow-lg py-12"
       >
         {featuresItems.map(({ id, img, h3, p }) => (
           <div
             key={id}
-            className="flex flex-col items-center border-r-[1px] last:border-none"
+            className="flex flex-col items-center border-r-[1px] last:border-none group"
           >
-            <img src={img} alt="" className="w-8 pb-4" />
+            <img src={img} alt="" className="w-8 pb-4 opacity-60 group-hover:opacity-100" />
             <h3 className="font-semibold text-lg">{h3}</h3>
             <p>{p}</p>
           </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import { IoSearchOutline } from "react-icons/io5";
 import { AiOutlineShopping } from "react-icons/ai";
+import {Link} from 'react-router-dom'
 
 const menuLinks = [
   {
@@ -10,8 +11,8 @@ const menuLinks = [
   },
   {
     id: 2,
-    title: "shop",
-    path: "/shop  ",
+    title: "store",
+    path: "/store  ",
   },
   {
     id: 3,
@@ -19,19 +20,9 @@ const menuLinks = [
     path: "/blog",
   },
   {
-    id: 4,
-    title: "pages",
-    path: "/pages",
-  },
-  {
     id: 5,
     title: "contact",
     path: "/contact",
-  },
-  {
-    id: 6,
-    title: "store",
-    path: "/store",
   },
 ];
 
@@ -41,20 +32,18 @@ const NavBar = () => {
       <ul className="flex items-center uppercase">
         {menuLinks.map(({ id, title, path }) => (
           <li key={id} className="px-6">
-            <a href={path}>{title}</a>
+            <Link to={path}>{title}</Link>
           </li>
         ))}
         <li>
-          <span className="absolute -left-[1000px]">search</span>
-          <a href="/">
+          <Link to="/cart">
             <AiOutlineShopping className="text-xl" />
-          </a>
+          </Link>
         </li>
       </ul>
 
       <div>
         <button className="flex h-full items-center px-6 ">
-          <span className="absolute -left-[1000px]">store</span>
           <IoSearchOutline className="text-xl" />
         </button>
       </div>

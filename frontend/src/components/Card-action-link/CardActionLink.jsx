@@ -13,13 +13,13 @@ const CardActionLink = ({ path, icon, context }) => {
       className="flex items-center whitespace-nowrap relative overflow-hidden px-1"
       href={path}
     >
-      {icon == "AiOutlineShopping" ? (
+      {icon === "AiOutlineShopping" ? (
         <AiOutlineShopping className={style.icon} />
-      ) : icon == "AiOutlineHeart" ? (
+      ) : icon === "AiOutlineHeart" ? (
         <AiOutlineHeart className={style.icon} />
-      ) : icon == "BsArrowsMove" ? (
+      ) : icon === "BsArrowsMove" ? (
         <BsArrowsMove className={style.icon} />
-      ) : icon == "TiArrowSync" ? (
+      ) : icon === "TiArrowSync" ? (
         <TiArrowSync className={style.icon} />
       ) : null}
 

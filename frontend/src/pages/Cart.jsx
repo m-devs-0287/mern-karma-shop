@@ -4,7 +4,7 @@ import Hero from "../components/Hero";
 const Cart = () => {
   return (
     <>
-      <Hero />
+      <Hero page={'Cart'}/>
     </>
   );
 };

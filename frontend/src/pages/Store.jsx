@@ -5,7 +5,7 @@ import Hero from "../components/Hero";
 const Store = () => {
   return (
     <>
-      <Hero/>
+      <Hero page={'store'}/>
     </>
   );
 };

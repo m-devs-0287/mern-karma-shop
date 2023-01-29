@@ -4,7 +4,7 @@ import Hero from "../components/Hero";
 const Blog = () => {
   return (
     <>
-      <Hero />
+      <Hero page={'Blog'} />
     </>
   )
 }

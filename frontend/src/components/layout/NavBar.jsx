@@ -31,11 +31,12 @@ const NavBar = () => {
     <nav className="flex h-full items-center text-sm">
       <ul className="flex items-center uppercase">
         {menuLinks.map(({ id, title, path }) => (
-          <li key={id} className="px-6">
+          <li key={id} className="px-6 hover:text-orange-500">
             <Link to={path}>{title}</Link>
           </li>
         ))}
-        <li>
+        
+        <li className="hover:text-orange-500">
           <Link to="/cart">
             <AiOutlineShopping className="text-xl" />
           </Link>
@@ -43,7 +44,7 @@ const NavBar = () => {
       </ul>
 
       <div>
-        <button className="flex h-full items-center px-6 ">
+        <button className="flex h-full items-center px-6 hover:text-orange-500">
           <IoSearchOutline className="text-xl" />
         </button>
       </div>

@@ -32,7 +32,7 @@ const GalleryOfDeals = () => {
     <div className="flex h-[420px] w-[1200px] px-6 m-auto mb-24">
       <div className="h-full grid grid-cols-3 gap-8 mr-8 mb-24 justify-between w-[65%] ">
         {dealsItems.map(({ id, img, path, context }) => (
-          <a
+          <a key={id}
             href={path}
             className="relative overflow-hidden drop-shadow-lg first:col-span-2 last:col-span-2 group"
           >

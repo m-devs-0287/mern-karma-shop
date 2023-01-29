@@ -1,8 +1,5 @@
 import React from "react";
 import CardActionLink from "../Card-action-link/CardActionLink";
-import { AiOutlineShopping, AiOutlineHeart } from "react-icons/ai";
-import { BsArrowsMove } from "react-icons/bs";
-import { TiArrowSync } from "react-icons/ti";
 
 const latestProducts = [
   {

@@ -23,7 +23,7 @@ const Hero = (props) => {
         <section className="h-[400px] bg-hero bg-[100%] bg-[bottom_100px]">
           <div className="m-auto w-[1200px] h-full flex flex-col items-end top-1/2 relative">
             <div className="w-1/2 text-white flex flex-col gap-4 capitalize">
-              <h1 className="text-6xl font-bold capitalize">
+              <h1 className="text-5xl font-bold capitalize">
                 {props.page} Page
               </h1>
               <Breadcrumbs />

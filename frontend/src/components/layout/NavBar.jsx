@@ -31,13 +31,13 @@ const NavBar = () => {
     <nav className="flex h-full items-center text-sm">
       <ul className="flex items-center uppercase">
         {menuLinks.map(({ id, title, path }) => (
-          <li key={id} className="px-6 hover:text-orange-500">
-            <Link to={path}>{title}</Link>
+          <li key={id} >
+            <Link className="px-6 hover:text-orange-500" to={path}>{title}</Link>
           </li>
         ))}
         
-        <li className="hover:text-orange-500">
-          <Link to="/cart">
+        <li>
+          <Link to="/cart" className="px-6 hover:text-orange-500">
             <AiOutlineShopping className="text-xl" />
           </Link>
         </li>

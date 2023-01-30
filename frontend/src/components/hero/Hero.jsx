@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import React from "react";
-import Slider from "./image-slider/ImageSlider";
-import Breadcrumbs from "./breadcrumbs/Breadcrumbs";
+import Slider from "../image-slider/ImageSlider";
+import Breadcrumbs from "../breadcrumbs/Breadcrumbs";
 
 const Hero = (props) => {
   const [url, setUrl] = useState("");

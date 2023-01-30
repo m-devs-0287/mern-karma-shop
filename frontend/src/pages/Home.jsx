@@ -1,7 +1,8 @@
 import React from "react";
 import FeaturesArea from "../components/features-area/FeaturesArea";
 import GalleryOfDeals from "../components/gallery-deals-area/GalleryOfDeals";
-import Hero from "../components/Hero";
+import Hero from "../components/hero/Hero";
+
 import LatestProducts from "../components/latest-products/LatestProducts";
 
 const Home = () => {

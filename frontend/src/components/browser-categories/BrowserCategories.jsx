@@ -5,7 +5,7 @@ import Accordion from "../accordion/Accordion";
 const categoriesList = [
   {
     title: "Sports",
-    subCategory: [
+    content: [
       {
         title: "Men",
       },
@@ -19,7 +19,7 @@ const categoriesList = [
   },
   {
     title: "Casual",
-    subCategory: [
+    content: [
       {
         title: "Men",
       },
@@ -33,7 +33,7 @@ const categoriesList = [
   },
   {
     title: "Training",
-    subCategory: [
+    content: [
       {
         title: "Men",
       },
@@ -47,7 +47,7 @@ const categoriesList = [
   },
   {
     title: "Swiming",
-    subCategory: [
+    content: [
       {
         title: "Beach",
       },
@@ -61,7 +61,7 @@ const categoriesList = [
   },
   {
     title: "Comfort",
-    subCategory: [
+    content: [
       {
         title: "Men",
       },
@@ -75,7 +75,7 @@ const categoriesList = [
   },
   {
     title: "Classic",
-    subCategory: [
+    content: [
       {
         title: "Men",
       },
@@ -96,7 +96,7 @@ const BrowserCategories = () => {
   };
 
   return (
-    <aside>
+    <aside className="mb-10">
       <header className="bg-[#828bb3] text-white text-lg font-semibold p-4">
         <h4>Browser Categories</h4>
       </header>

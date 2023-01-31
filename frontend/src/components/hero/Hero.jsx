@@ -24,7 +24,7 @@ const Hero = (props) => {
       ) : (
         <section className="h-[400px] bg-hero bg-[100%] bg-[bottom_100px] overflow-hidden">
           <div className="m-auto w-[1200px] flex flex-col items-end top-1/2 relative">
-            <div className="w-1/2 text-white flex flex-col gap-4 capitalize border">
+            <div className="w-1/2 text-white flex flex-col gap-4 capitalize">
               <h1 className="text-5xl font-bold capitalize">
                 {props.page} Page
               </h1>

@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
-const Accordion = ({ list }) => {
+const Accordion = ({ header,data }) => {
   const [selected, setSelected] = useState(null);
 
   const toggle = (index) => {
@@ -13,28 +13,36 @@ const Accordion = ({ list }) => {
 
   const styles = {
     wrapper: "drop-shadow-md bg-white",
-    title: 'flex items-center h-12 border-b-2 font-semibold text-black px-4 hover:text-orange-500',
-    content: 'pl-8 flex items-center h-12 border-b-2 text-black hover:text-orange-500'
-  }
+    header: "bg-[#828bb3] text-white text-lg font-semibold p-4",
+    title: "flex items-center h-12 border-b-2 font-semibold text-black px-4 hover:text-orange-500",
+    content: "pl-8 flex items-center h-12 border-b-2 text-black hover:text-orange-500",
+  };
 
   return (
-    <ul className={styles.wrapper}>
-      {list.map(({ title, content }, index) => (
-        <li key={index}>
-          <span className={styles.title} onClick={() => toggle(index)}>{title}</span>
-          
-          {selected === index ? (
-            <ul>
-              {content.map(({ title }, index) => (
-                <li key={index} className={styles.content}>
-                  {title}
-                </li>
-              ))}
-            </ul>
-          ) : null}
-        </li>
-      ))}
-    </ul>
+    <div>
+      <h4 className={styles.header}>
+        {header}
+      </h4>
+      <ul className={styles.wrapper}>
+        {data.map(({ title, content }, index) => (
+          <li key={index}>
+            <span className={styles.title} onClick={() => toggle(index)}>
+              {title}
+            </span>
+
+            {selected === index ? (
+              <ul>
+                {content.map(({ title }, index) => (
+                  <li key={index} className={styles.content}>
+                    {title}
+                  </li>
+                ))}
+              </ul>
+            ) : null}
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 };
 

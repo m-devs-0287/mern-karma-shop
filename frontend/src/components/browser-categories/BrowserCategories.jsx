@@ -1,107 +1,116 @@
 import React from "react";
-import { useState } from "react";
 import Accordion from "../accordion/Accordion";
+import Checkbox from "../checkbox/Checkbox";
 
-const categoriesList = [
-  {
-    title: "Sports",
-    content: [
-      {
-        title: "Men",
-      },
-      {
-        title: "Women",
-      },
-      {
-        title: "Kids",
-      },
-    ],
-  },
-  {
-    title: "Casual",
-    content: [
-      {
-        title: "Men",
-      },
-      {
-        title: "Women",
-      },
-      {
-        title: "Kids",
-      },
-    ],
-  },
-  {
-    title: "Training",
-    content: [
-      {
-        title: "Men",
-      },
-      {
-        title: "Women",
-      },
-      {
-        title: "Kids",
-      },
-    ],
-  },
-  {
-    title: "Swiming",
-    content: [
-      {
-        title: "Beach",
-      },
-      {
-        title: "Pool",
-      },
-      {
-        title: "River",
-      },
-    ],
-  },
-  {
-    title: "Comfort",
-    content: [
-      {
-        title: "Men",
-      },
-      {
-        title: "Women",
-      },
-      {
-        title: "Kids",
-      },
-    ],
-  },
-  {
-    title: "Classic",
-    content: [
-      {
-        title: "Men",
-      },
-      {
-        title: "Women",
-      },
-      {
-        title: "Kids",
-      },
-    ],
-  },
-];
+const categories = {
+  header: "Browser Categories",
+  data: [
+    {
+      title: "Sports",
+      content: [
+        {
+          title: "Men",
+        },
+        {
+          title: "Women",
+        },
+        {
+          title: "Kids",
+        },
+      ],
+    },
+    {
+      title: "Casual",
+      content: [
+        {
+          title: "Men",
+        },
+        {
+          title: "Women",
+        },
+        {
+          title: "Kids",
+        },
+      ],
+    },
+    {
+      title: "Training",
+      content: [
+        {
+          title: "Men",
+        },
+        {
+          title: "Women",
+        },
+        {
+          title: "Kids",
+        },
+      ],
+    },
+    {
+      title: "Swiming",
+      content: [
+        {
+          title: "Beach",
+        },
+        {
+          title: "Pool",
+        },
+        {
+          title: "River",
+        },
+      ],
+    },
+    {
+      title: "Comfort",
+      content: [
+        {
+          title: "Men",
+        },
+        {
+          title: "Women",
+        },
+        {
+          title: "Kids",
+        },
+      ],
+    },
+    {
+      title: "Classic",
+      content: [
+        {
+          title: "Men",
+        },
+        {
+          title: "Women",
+        },
+        {
+          title: "Kids",
+        },
+      ],
+    },
+  ],
+};
+
+const checkBoxData = {
+  componentName: "Colors",
+  data: [
+    { title: "black", name: "black" },
+    { title: "black leather", name: "blackLeather" },
+    { title: "Gold", name: "gold" },
+    { title: "Spacegrey", name: "spacegrey" },
+  ],
+};
+
+const styles = {
+  aside: "flex flex-col gap-10",
+};
 
 const BrowserCategories = () => {
-  
-  const toggle = (i) => {
-    console.log(i);
-  };
-
   return (
-    <aside className="mb-10">
-      <header className="bg-[#828bb3] text-white text-lg font-semibold p-4">
-        <h4>Browser Categories</h4>
-      </header>
-
-      <Accordion list={categoriesList}/>
+    <aside className={styles.aside}>
+      <Accordion {...categories} />
+      <Checkbox {...checkBoxData} />
     </aside>
   );
 };

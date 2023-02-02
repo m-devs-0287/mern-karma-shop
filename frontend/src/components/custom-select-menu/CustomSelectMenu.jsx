@@ -8,8 +8,8 @@ const styles = {
 const CustomSelectMenu = ({name, data}) => {
   return (
     <select name={name} id={name} className={styles.select}>
-      {data.map(({name}) => (
-        <option className={styles.option} value={name}>{name}</option>
+      {data.map(({name}, i) => (
+        <option key={i} className={styles.option} value={name}>{name}</option>
       ))}
     </select>
   );

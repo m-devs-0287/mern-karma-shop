@@ -6,7 +6,7 @@ const categories = {
   header: "Browser Categories",
   data: [
     {
-      title: "Sports",
+      title: "Gender",
       content: [
         {
           title: "Men",
@@ -15,68 +15,44 @@ const categories = {
           title: "Women",
         },
         {
-          title: "Kids",
+          title: "Boy",
+        },
+        {
+          title: "Girl",
         },
       ],
     },
     {
-      title: "Casual",
+      title: "Category",
       content: [
         {
-          title: "Men",
+          title: "Sport",
         },
         {
-          title: "Women",
+          title: "Casual",
         },
         {
-          title: "Kids",
+          title: "Classic",
+        },
+        {
+          title: "Running",
         },
       ],
     },
     {
-      title: "Training",
+      title: "Collections",
       content: [
         {
-          title: "Men",
+          title: "Summer 2023",
         },
         {
-          title: "Women",
-        },
-        {
-          title: "Kids",
+          title: "Winter 2023",
         },
       ],
     },
+
     {
-      title: "Swiming",
-      content: [
-        {
-          title: "Beach",
-        },
-        {
-          title: "Pool",
-        },
-        {
-          title: "River",
-        },
-      ],
-    },
-    {
-      title: "Comfort",
-      content: [
-        {
-          title: "Men",
-        },
-        {
-          title: "Women",
-        },
-        {
-          title: "Kids",
-        },
-      ],
-    },
-    {
-      title: "Classic",
+      title: "Others",
       content: [
         {
           title: "Men",
@@ -106,7 +82,7 @@ const styles = {
   aside: "flex flex-col gap-10",
 };
 
-const BrowserCategories = () => {
+const AsideMenu = () => {
   return (
     <aside className={styles.aside}>
       <Accordion {...categories} />
@@ -115,4 +91,4 @@ const BrowserCategories = () => {
   );
 };
 
-export default BrowserCategories;
+export default AsideMenu;

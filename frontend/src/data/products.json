@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "img": "./assets/p1.jpg.webp",
+    "brand": "Nike",
+    "model": "Hammer Sole",
+    "price": 210,
+    "salesPrice": 150,
+    "type": "Sports",
+    "color": "grey",
+    "gender": "men"
+  },
+  {
+    "id": 2,
+    "img": "./assets/p2.jpg.webp",
+    "brand": "Nike",
+    "model": "Hammer Sole",
+    "price": 210,
+    "salesPrice": 150,
+    "type": "Running",
+    "color": "green",
+    "gender": "women"
+  },
+  {
+    "id": 3,
+    "img": "./assets/p3.jpg.webp",
+    "brand": "Nike",
+    "model": "Hammer Sole",
+    "price": 210,
+    "salesPrice": 150,
+    "type": "casual",
+    "color": "black",
+    "gender": "women"
+  },
+  {
+    "id": 4,
+    "img": "./assets/p4.jpg.webp",
+    "brand": "Nike",
+    "model": "Hammer Sole",
+    "price": 210,
+    "salesPrice": 150,
+    "type": "classic",
+    "color": "brown",
+    "gender": "men"
+  },
+  {
+    "id": 5,
+    "img": "./assets/p5.jpg.webp",
+    "brand": "Nike",
+    "model": "Hammer Sole",
+    "price": 210,
+    "salesPrice": 150,
+    "type": "casual",
+    "color": "grey",
+    "gender": "men"
+  },
+  {
+    "id": 6,
+    "img": "./assets/p6.jpg.webp",
+    "brand": "Nike",
+    "model": "Hammer Sole",
+    "price": 210,
+    "salesPrice": 150,
+    "type": "Sports",
+    "color": "red",
+    "gender": "kids"
+  },
+  {
+    "id": 7,
+    "img": "./assets/p7.jpg.webp",
+    "brand": "Nike",
+    "model": "Hammer Sole",
+    "price": 210,
+    "salesPrice": 150,
+    "type": "classic",
+    "color": "grey",
+    "gender": "women"
+  },
+  {
+    "id": 8,
+    "img": "./assets/p8.jpg.webp",
+    "brand": "Nike",
+    "model": "Hammer Sole",
+    "price": 210,
+    "salesPrice": 150,
+    "type": "casual",
+    "color": "grey",
+    "gender": "women"
+  }
+]

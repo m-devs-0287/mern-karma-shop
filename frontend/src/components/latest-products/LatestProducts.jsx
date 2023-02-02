@@ -1,6 +1,6 @@
 import React from "react";
-import CardActionLink from "../Card-action-link/CardActionLink";
-
+import ProductCard from "../product-card/ProductCard";
+// ProductCard components data
 const latestProducts = [
   {
     id: 1,
@@ -87,62 +87,50 @@ const actionLinks = [
     id: 2,
     path: "/",
     icon: "AiOutlineHeart",
-    context: "Add to bag",
+    context: "Wish List",
   },
   {
     id: 3,
     path: "/",
-    icon: "BsArrowsMove",
-    context: "Add to bag",
+    icon: "TiArrowSync",
+    context: "Compare",
   },
   {
     id: 4,
     path: "/",
-    icon: "TiArrowSync",
-    context: "Add to bag",
+    icon: "BsArrowsMove",
+    context: "View More",
   },
 ];
+
+// LatestProducts component data
+const data = {
+  h2: 'Lastest Products',
+  p: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.Consequuntur officiis error suscipit corporis quibusdam dolor'
+}
+// LatestProducts component styles
+const styles = {
+  sectionContainer: "max-w-[1200px] m-auto",
+  sectionContext: "flex flex-col items-center text-center gap-4",
+  h2: "font-semibold text-4xl text-black",
+  p: "max-w-[600px]",
+  productsContainer:"grid grid-cols-4 gap-8 my-20",
+};
 
 const LatestProducts = () => {
   return (
     <section>
-      <div className="max-w-[1200px] m-auto">
-        <div className="flex flex-col items-center text-center gap-4">
-          <h2 className="font-semibold text-4xl text-black">
-            Lastest Products
-          </h2>
-          <p className="max-w-[600px]">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Consequuntur officiis error suscipit corporis quibusdam dolor
-          </p>
+      <div className={styles.sectionContainer}>
+      
+        <div className={styles.sectionContext}>
+          <h2 className={styles.h2}>{data.h2}</h2>
+          <p className={styles.p}>{data.p}</p>
         </div>
-        <div className="grid grid-cols-4 gap-2 my-20">
-          {latestProducts.map(
-            ({ id, img, brand, model, type, price, salesPrice }) => (
-              <div key={id} className="py-4 flex flex-col gap-2">
-                <div className="w-[255px] h-[255px] ">
-                  <img src={img} alt="" className="w-full h-full" />
-                </div>
-                <h3 className="font-semibold">
-                  {brand} {model} {type}
-                </h3>
-                <p className="flex gap-4 font-semibold">
-                  <span>${salesPrice}</span> <span className="line-through text-black/20">{price}</span>
-                </p>
 
-                <div>
-                  <ul className="flex">
-                    {actionLinks.map(({ id, path, icon, context }) => (
-                      <li key={id} className="group">
-                        <CardActionLink path={path} icon={icon} context={context} />
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            )
-          )}
+        <div className={styles.productsContainer}>
+          <ProductCard latestProducts={latestProducts} actionLinks={actionLinks} />
         </div>
+
       </div>
     </section>
   );

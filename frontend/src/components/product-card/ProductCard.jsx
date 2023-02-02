@@ -1,0 +1,49 @@
+import React from "react";
+import CardActionLink from "../Card-action-link/CardActionLink";
+
+
+
+const styles = {
+  wrapper: "flex flex-col gap-3",
+  imgContainer: "w-full h-[255px]",
+  img: "w-full h-full",
+  h3: "font-semibold",
+  p: "flex gap-4 font-semibold",
+  pSpan: "line-through text-black/20"
+
+}
+
+const ProductCard = ({ latestProducts, actionLinks }) => {
+  return (
+    <>
+      {latestProducts.map(
+        ({ id, img, brand, model, type, price, salesPrice }) => (
+          <div key={id} className={styles.wrapper}>
+            <div className={styles.imgContainer}>
+              <img src={img} alt="" className={styles.img}/>
+            </div>
+            <h3 className={styles.h3}>
+              {brand} {model} {type}
+            </h3>
+            <p className={styles.p}>
+              <span>${salesPrice}</span>
+              <span className={styles.pSpan}>{price}</span>
+            </p>
+
+            <div>
+              <ul className="flex">
+                {actionLinks.map(({ id, path, icon, context }) => (
+                  <li key={id} className="group">
+                    <CardActionLink path={path} icon={icon} context={context} />
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        )
+      )}
+    </>
+  );
+};
+
+export default ProductCard;

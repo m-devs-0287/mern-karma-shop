@@ -13,7 +13,7 @@ const Accordion = ({ header,data }) => {
 
   const styles = {
     wrapper: "drop-shadow-md bg-white",
-    header: "bg-[#828bb3] text-white text-lg font-semibold p-4",
+    header: "bg-[#828bb3] text-white text-lg font-semibold px-4 h-16 flex items-center",
     title: "flex items-center h-12 border-b-2 font-semibold text-black px-4 hover:text-orange-500",
     content: "pl-8 flex items-center h-12 border-b-2 text-black hover:text-orange-500",
   };

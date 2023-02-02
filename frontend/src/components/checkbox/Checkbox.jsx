@@ -9,21 +9,15 @@ const styles = {
     "pl-8 flex items-center h-12 border-b-2 text-black hover:text-orange-500 flex gap-2 capitalize",
 };
 
-const Checkbox = ({ componentName, data }) => {
-  const [isChecked, setIsChecked] = useState({
-    black: false,
-    blackLeather: false,
-    gold: false,
-    spacegrey: false,
-  });
+const Checkbox = ({ componentName, data, state }) => {
+
+  const [isChecked, setIsChecked] = useState(state);
 
   const handleChange = ({ target }) => {
-    setIsChecked(
-      {
+    setIsChecked({
         ...isChecked,
         [ target.name ]: !isChecked[ target.name ]
-      }
-    )
+      })
   };
 
   return (

@@ -6,12 +6,14 @@ import Store from "./pages/Store";
 import Cart from "./pages/Cart";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <div className="text-gray-500">
       <Header />
       <main>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/store" element={<Store />} />

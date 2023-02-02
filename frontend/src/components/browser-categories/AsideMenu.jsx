@@ -72,10 +72,18 @@ const checkBoxData = {
   componentName: "Colors",
   data: [
     { title: "black", name: "black" },
-    { title: "black leather", name: "blackLeather" },
-    { title: "Gold", name: "gold" },
-    { title: "Spacegrey", name: "spacegrey" },
+    { title: "green", name: "green" },
+    { title: "brown", name: "brown" },
+    { title: "red", name: "red" },
+    { title: "grey", name: "grey" },
   ],
+  state: {
+    black: false,
+    green: false,
+    brown: false,
+    red: false,
+    grey: false,
+  }
 };
 
 const styles = {

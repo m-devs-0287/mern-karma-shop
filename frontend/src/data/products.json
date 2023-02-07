@@ -6,7 +6,7 @@
     "model": "Hammer Sole",
     "price": 210,
     "salesPrice": 150,
-    "type": "Sports",
+    "type": "sports",
     "color": "grey",
     "gender": "men"
   },
@@ -17,7 +17,7 @@
     "model": "Hammer Sole",
     "price": 210,
     "salesPrice": 150,
-    "type": "Running",
+    "type": "running",
     "color": "green",
     "gender": "women"
   },
@@ -61,7 +61,7 @@
     "model": "Hammer Sole",
     "price": 210,
     "salesPrice": 150,
-    "type": "Sports",
+    "type": "sports",
     "color": "red",
     "gender": "kids"
   },

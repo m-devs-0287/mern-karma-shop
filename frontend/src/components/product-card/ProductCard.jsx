@@ -1,38 +1,33 @@
-import React from "react";
-import CardActionLink from "../Card-action-link/CardActionLink";
-
-const styles = {
-  wrapper: "flex flex-col gap-3",
-  imgContainer: "w-full h-[255px]",
-  img: "w-full h-full",
-  h3: "font-semibold",
-  p: "flex gap-4 font-semibold",
-  pSpan: "line-through text-black/20",
-};
+import React, { useState } from "react";
+import { UseFilter } from "../../hooks/FilterContext";
+import ProductCardDetails from "../product-card-details/ProductCardDetails";
 
 const ProductCard = ({ data }) => {
+  const [color, setColor] = useState("red");
+  const filter = UseFilter();
+
+
+
+  const filterItems = (product) => {
+    const sport = product.type === 'running'
+    return sport
+  }
+  
   return (
+
     <>
-      {data.map(({ id, img, brand, model, type, price, salesPrice }) => (
-        <div key={id} className={styles.wrapper}>
-          
-          <div className={styles.imgContainer}>
-            <img src={img} alt="" className={styles.img} />
-          </div>
-
-          <div>
-            <h3 className={styles.h3}>
-              {brand} {model} {type}
-            </h3>
-            <p className={styles.p}>
-              <span>${salesPrice}</span>
-              <span className={styles.pSpan}>{price}</span>
-            </p>
-          </div>
-
-          <CardActionLink />
-        </div>
-      ))}
+      {
+      data
+      .filter( product => (
+        filterItems(product)
+      ))
+      .map((data, i) => (
+        <>
+        <ProductCardDetails key={i} data={data} />
+        </>
+      ))
+      
+      }
     </>
   );
 };

@@ -63,7 +63,7 @@
     "salesPrice": 150,
     "type": "sports",
     "color": "red",
-    "gender": "kids"
+    "gender": "boy"
   },
   {
     "id": 7,
@@ -74,7 +74,7 @@
     "salesPrice": 150,
     "type": "classic",
     "color": "grey",
-    "gender": "women"
+    "gender": "girl"
   },
   {
     "id": 8,

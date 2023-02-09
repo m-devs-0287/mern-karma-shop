@@ -6,28 +6,22 @@ const ProductCard = ({ data }) => {
   const [color, setColor] = useState("red");
   const filter = UseFilter();
 
-
-
   const filterItems = (product) => {
-    const sport = product.type === 'running'
-    return sport
-  }
-  
-  return (
+    const sport = product.type === filter.category;
+    return sport;
+  };
 
+  return (
     <>
-      {
-      data
-      .filter( product => (
-        filterItems(product)
-      ))
-      .map((data, i) => (
-        <>
-        <ProductCardDetails key={i} data={data} />
-        </>
-      ))
-      
-      }
+      {data
+        .filter( product => (
+          filterItems(product)
+        ))
+        .map((data, i) => (
+          <div key={i}>
+            <ProductCardDetails data={data} />
+          </div>
+        ))}
     </>
   );
 };

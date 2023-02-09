@@ -26,7 +26,7 @@ const categories = {
       title: "Category",
       content: [
         {
-          title: "Sport",
+          title: "Sports",
         },
         {
           title: "Casual",

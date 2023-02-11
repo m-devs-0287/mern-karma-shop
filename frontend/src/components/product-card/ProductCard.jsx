@@ -1,28 +1,35 @@
-import React, { useState } from "react";
-import { UseFilter } from "../../hooks/FilterContext";
-import ProductCardDetails from "../product-card-details/ProductCardDetails";
+import CardActionLink from "../Card-action-link/CardActionLink";
 
-const ProductCard = ({ data }) => {
-  const [color, setColor] = useState("red");
-  const filter = UseFilter();
+const styles = {
+  wrapper: "flex flex-col gap-3",
+  imgContainer: "w-full h-[255px]",
+  img: "w-full h-full",
+  h3: "font-semibold",
+  p: "flex gap-4 font-semibold",
+  pSpan: "line-through text-black/20",
+};
 
-  const filterItems = (product) => {
-    const sport = product.type === filter.category;
-    return sport;
-  };
-
+const ProductCard = ({data}) => {
+  const { img, brand, model, type, price, salesPrice } = data;
+  
   return (
-    <>
-      {data
-        .filter( product => (
-          filterItems(product)
-        ))
-        .map((data, i) => (
-          <div key={i}>
-            <ProductCardDetails data={data} />
-          </div>
-        ))}
-    </>
+    <div className={styles.wrapper}>
+      
+      <div className={styles.imgContainer}>
+        <img src={img} alt="" className={styles.img} />
+      </div>
+
+      <div>
+        <h3 className={styles.h3}>
+          {brand} {model} {type}
+        </h3>
+        <p className={styles.p}>
+          <span>${salesPrice}</span>
+          <span className={styles.pSpan}>{price}</span>
+        </p>
+      </div>
+      <CardActionLink />
+    </div>
   );
 };
 

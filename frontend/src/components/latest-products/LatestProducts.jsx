@@ -27,7 +27,9 @@ const LatestProducts = () => {
         </div>
 
         <div className={styles.productsContainer}>
-          <ProductCard data={Products}  />
+          {Products.map((product) => (
+            <ProductCard key={product.id} data={product} />
+          ))}
         </div>
       </div>
     </section>

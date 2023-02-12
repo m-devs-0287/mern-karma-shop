@@ -27,7 +27,9 @@ const LatestProducts = () => {
         </div>
 
         <div className={styles.productsContainer}>
-          {Products.map((product) => (
+          {Products
+          .filter(product => product.id <= 8 )
+          .map((product) => (
             <ProductCard key={product.id} data={product} />
           ))}
         </div>

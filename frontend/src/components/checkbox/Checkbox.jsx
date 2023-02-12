@@ -1,24 +1,30 @@
 import React from "react";
 
 import { useState } from "react";
+import { UseUpdateFilter } from "../../hooks/FilterContext";
+
 
 const styles = {
   container: "drop-shadow-md bg-white",
   header: "bg-[#828bb3] text-white text-lg font-semibold p-4",
-  content:
-    "pl-8 flex items-center h-12 border-b-2 text-black hover:text-orange-500 flex gap-2 capitalize",
+  content: "pl-8 flex items-center h-12 border-b-2 text-black hover:text-orange-500 flex gap-2 capitalize",
 };
 
 const Checkbox = ({ componentName, data, state }) => {
 
+  const updateFilter = UseUpdateFilter()
   const [isChecked, setIsChecked] = useState(state);
 
-  const handleChange = ({ target }) => {
+  const handleChange = (e) => {
     setIsChecked({
         ...isChecked,
-        [ target.name ]: !isChecked[ target.name ]
+        [ e.target.name ]: !isChecked[ e.target.name ]
       })
-  };
+      
+      console.log(updateFilter(e))
+      
+    };
+    
 
   return (
     <div className={styles.container}>

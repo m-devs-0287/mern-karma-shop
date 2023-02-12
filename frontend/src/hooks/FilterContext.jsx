@@ -7,35 +7,30 @@ export const UseFilter = () => useContext(Filter);
 export const UseUpdateFilter = () => useContext(UpdateFilter);
 
 export const GenderProvider = ({ children }) => {
-  const [filter, setFilter] = useState({
-    
-      category: "sports",
-      gender: "man",
-      collection: "",
-    
+
+  const [filter, setFilter] = useState({  
+      category: "",
+      gender: "",
+      color: ''
   });
 
   const updateFilter = (e) => {
- 
- 
-    if (e.target.parentElement.parentElement.firstChild.innerText.toLowerCase() === "category") {
-      const value = e.target.innerText.toLowerCase()
-      setFilter(
-       { ...filter,
-        category: value}
-      )
+
+    switch(e.target.parentElement.parentElement.firstChild.innerText.toLowerCase()){
+      case 'category':
+        setFilter({ ...filter, category: e.target.innerText.toLowerCase()})
+        break;
+  
+      case 'gender':
+        setFilter({ ...filter, gender: e.target.innerText.toLowerCase()})
+        console.log(filter)
+        break;
     }
-
-    if (e.target.parentElement.parentElement.firstChild.innerText.toLowerCase() === "gender") {
-      const value = e.target.innerText.toLowerCase()
-      setFilter(
-       { ...filter,
-        gender: value}
-      )
-    }
-
-
+    
+    
   };
+
+
 
   return (
     <Filter.Provider value={filter}>
